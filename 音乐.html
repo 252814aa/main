@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>音视频播放器</title>
+</head>
+<body>
+   <p/>
+<audio controls="controls" loop="loop" preload="auto">
+   <source src="C:\Users\15629\Desktop\Wed前端开发.HTML\音乐\html - 星河无边.mp3.mp3" type="audio/mpeg">
+   您的浏览器不支持音频播放...
+</audio>
+<p/>
+<button onclick="playPrevious()">上一曲</button> <button onclick="playNext()">下一曲</button>
+<script> var video = document.getElementById("myVideo");   
+var currentIndex = 0; var videoSources = video.getElementsByTagName("source");
+function playPrevious() {      currentIndex--;  
+       if (currentIndex < 0) { currentIndex = videoSources.length - 1;
+          }  video.src = videoSources[currentIndex].src; video.play();
+           }    function playNext() { currentIndex++;
+           if (currentIndex >= videoSources.length) { currentIndex = 0;     
+            } video.src = videoSources[currentIndex].src;      video.play(); 
+               } 
+                </script>
+                </body>
+                </html>
+             
